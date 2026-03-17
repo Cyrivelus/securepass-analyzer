@@ -47,3 +47,7 @@ node_modules/
 target/
 .vercel/
 dist/
+node_modules/
+target/
+.vercel/
+dist/
