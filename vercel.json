@@ -1,21 +1,8 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.rs": {
-      "runtime": "vercel-rust@0.1.0"
-    }
-  },
+  "framework": "angular",
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.rs"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }

@@ -1,13 +1,19 @@
 [package]
-name = "securepass-api"
+name = "securepass-analyzer"
 version = "0.1.0"
 edition = "2021"
 
+# 1. Indique à Rust de générer une bibliothèque dynamique pour le Web (C-Dynamic Library)
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
-# Pour gérer les requêtes Vercel
-vercel_runtime = "1.1.0"
-# Pour la sérialisation JSON (comme encoding/json en Go)
+# 2. Le pont indispensable entre Rust et le JavaScript du navigateur
+wasm-bindgen = "0.2"
+
+# 3. Pour la sérialisation des données entre Rust et Angular
 serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-# Pour le calcul d'entropie
-zxcvbn = "2.2.2"
+serde-wasm-bindgen = "0.6"
+
+# 4. Le moteur d'analyse de force de mot de passe (Entropy)
+zxcvbn = "2.2"
