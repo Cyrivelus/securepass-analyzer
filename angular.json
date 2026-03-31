@@ -22,6 +22,7 @@
           "options": {
             "outputPath": "dist/securepass-analyzer",
             "browser": "src/main.ts",
+            "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
