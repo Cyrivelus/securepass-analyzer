@@ -14,7 +14,7 @@ Ce projet a été initialement généré avec [Angular CLI](https://github.com/a
 
 ---
 
-## 🚀 Installation et Configuration
+##  Installation et Configuration
 
 ### 1. Prérequis
 Assurez-vous d'avoir installé sur votre machine :
