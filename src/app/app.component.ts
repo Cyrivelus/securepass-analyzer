@@ -1,14 +1,15 @@
 import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router'; // 👈 Ajouté pour Vercel
 
 // 🦀 Importation de ton binaire WebAssembly fraîchement compilé
 import init, { analyze_password } from '../../pkg/securepass_analyzer.js';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
+  standalone: true, // 👈 C'était déjà là, parfait !
+  imports: [CommonModule, FormsModule, RouterOutlet], // 👈 Ajout du RouterOutlet ici
   template: `
     <div
       style="padding: 40px; font-family: 'Segoe UI', sans-serif; max-width: 550px; margin: 80px auto; background: #1a1a1a; color: white; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid #333;"
