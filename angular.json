@@ -25,7 +25,7 @@
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
+            "assets": [ "src/public", "pkg",
               "src/public"
             ],
             "styles": [
