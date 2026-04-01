@@ -1,3 +1,4 @@
+import 'tslib'; // 👈 On force Angular à charger tslib ici !
 import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
