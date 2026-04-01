@@ -1,1 +1,1 @@
-{"headers": [{"source": "/(.*).wasm", "headers": [{"key": "Content-Type", "value": "application/wasm"}]}]}
+{"headers": [{"source": "/(.*).wasm", "headers": [{"key": "Content-Type", "value": "application/wasm"}]}], "routes": [{"src": "/(.*).wasm", "dest": "/$1.wasm"}, {"src": "/(.*)", "dest": "/index.html"}]}
