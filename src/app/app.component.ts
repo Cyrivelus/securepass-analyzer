@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router'; // 👈 Ajouté pour Vercel
 
 // 🦀 Importation de ton binaire WebAssembly fraîchement compilé
-import init, { analyze_password } from '../../pkg/securepass_analyzer.js';
+import init, { analyze_password } from '../pkg/securepass_analyzer.js';
 
 @Component({
   selector: 'app-root',
