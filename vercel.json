@@ -1,22 +1,11 @@
-{
-  "headers": [
-    {
-      "source": "/(.*).wasm",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/wasm"
-        }
-      ]
-    }
-  ],
+﻿{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/securepass/browser",
   "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/securepass_analyzer_bg.wasm", "headers": { "Content-Type": "application/wasm" }, "dest": "/securepass_analyzer_bg.wasm" },
+    { "src": "/pkg/securepass_analyzer_bg.wasm", "headers": { "Content-Type": "application/wasm" }, "dest": "/pkg/securepass_analyzer_bg.wasm" },
+    { "src": "/(.*\\.wasm)", "headers": { "Content-Type": "application/wasm" }, "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
