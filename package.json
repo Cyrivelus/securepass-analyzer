@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --headers \"Content-Type=application/wasm\"",
+    "start": "ng serve",
     "build": "ng build",
     "vercel-dev": "echo 'Ready'"
   },
