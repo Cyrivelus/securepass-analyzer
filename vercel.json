@@ -3,9 +3,14 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/securepass/browser",
   "routes": [
-    { "src": "/securepass_analyzer_bg.wasm", "headers": { "Content-Type": "application/wasm" }, "dest": "/securepass_analyzer_bg.wasm" },
-    { "src": "/pkg/securepass_analyzer_bg.wasm", "headers": { "Content-Type": "application/wasm" }, "dest": "/pkg/securepass_analyzer_bg.wasm" },
-    { "src": "/(.*\\.wasm)", "headers": { "Content-Type": "application/wasm" }, "dest": "/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*\\.wasm)",
+      "headers": { "Content-Type": "application/wasm" },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
