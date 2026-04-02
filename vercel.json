@@ -1,16 +1,22 @@
-@'
 {
   "headers": [
     {
       "source": "/(.*).wasm",
       "headers": [
-        { "key": "Content-Type", "value": "application/wasm" }
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
       ]
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "^/(.*)$", "dest": "/index.html" }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
-'@ | Set-Content -Path "vercel.json" -Encoding utf8
