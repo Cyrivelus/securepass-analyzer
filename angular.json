@@ -25,7 +25,12 @@
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [ "src/public", "src/pkg",
+            "assets": [
+              {
+                "glob": "securepass_analyzer_bg.wasm",
+                "input": "src/pkg",
+                "output": "/"
+              },
               "src/public"
             ],
             "styles": [
