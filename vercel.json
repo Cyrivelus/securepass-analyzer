@@ -1,1 +1,15 @@
-{"headers": [{"source": "/(.*)\\.wasm", "headers": [{"key": "Content-Type", "value": "application/wasm"}]}], "routes": [{"handle": "filesystem"}, {"src": "/(.*)", "dest": "/"}]}
+Set-Content -Path "vercel.json" -Value '{
+  "headers": [
+    {
+      "source": "/(.*)\\.wasm",
+      "headers": [
+        { "key": "Content-Type", "value": "application/wasm" }
+      ]
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "^/(api/.*)$", "dest": "/$1" },
+    { "src": "^/(.*)$", "dest": "/index.html" }
+  ]
+}'
